@@ -73,14 +73,14 @@ while True:
         cv2.putText(frame, "Dikkatin dagildi!", (20, 50),
                     cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 0, 255), 2)
         if not pygame.mixer.music.get_busy():
-            pygame.mixer.music.play(-1)  # döngüde çalsın
+            pygame.mixer.music.play(-1)  
     else:
         cv2.putText(frame, "Odakta", (20, 50),
                     cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 1)
         if pygame.mixer.music.get_busy():
             pygame.mixer.music.stop()
 
-    cv2.imshow("Goz Takibi - Final Sürüm", frame)
+    cv2.imshow("Goz Takibi", frame)
     if cv2.waitKey(1) & 0xFF == 27:
         break
 
